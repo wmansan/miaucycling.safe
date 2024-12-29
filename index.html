@@ -12,6 +12,7 @@
             line-height: 1.6;
             background-color: #f4f4f9;
             color: #333;
+            scroll-behavior: smooth;
         }
         header {
             background: #007BFF;
@@ -25,30 +26,25 @@
             background: #0056b3;
             padding: 10px;
         }
-        nav button {
+        nav a {
             background: white;
             color: #0056b3;
-            border: none;
+            text-decoration: none;
             margin: 0 10px;
             padding: 10px 20px;
-            cursor: pointer;
             border-radius: 5px;
             font-size: 16px;
         }
-        nav button:hover {
+        nav a:hover {
             background: #ddd;
         }
         section {
-            display: none;
             padding: 20px;
             margin: 20px auto;
             max-width: 800px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        section.active {
-            display: block;
         }
         h1, h2 {
             color: #007BFF;
@@ -68,13 +64,6 @@
             color: #007BFF;
         }
     </style>
-    <script>
-        function showSection(id) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => section.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -83,12 +72,12 @@
     </header>
 
     <nav>
-        <button onclick="showSection('about')">About Us</button>
-        <button onclick="showSection('projects')">Projects</button>
-        <button onclick="showSection('contact')">Contact</button>
+        <a href="#about">About Us</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <section id="about" class="active">
+    <section id="about">
         <h2>About Us</h2>
         <p>Our advocacy promotes safer urban cycling by addressing key challenges such as unsafe roads, poorly marked crosswalks, and dangerous intersections. Through dedicated bike lanes, improved infrastructure, and community engagement, we aim to create sustainable and cyclist-friendly cities that benefit everyone.</p>
     </section>
@@ -104,8 +93,8 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: info@urbancyclingadvocacy.com</p>
-        <p>Phone: +1-234-567-890</p>
+        <p>Email: <a href="mailto:mansanwalid.g@gmail.com">mansanwalid.g@gmail.com</a></p>
+        <p>Phone: 0945 473 8760</p>
         <p>Address: 123 Advocacy Lane, Cycle City, CC 12345</p>
     </section>
 
